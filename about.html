@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}About Us - Okhandayo PTY LTD{% endblock %}
+
+{% block content %}
+<section class="hero-section bg-light">
+    <div class="container py-5">
+        <h1 class="display-4 fw-bold mb-3">About Okhandayo PTY LTD</h1>
+        <p class="lead">Building a better future through sustainable development and community empowerment.</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="card shadow">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <img src="{{ url_for('static', filename='images/aboutP.jpg') }}" alt="Okhandayo Team"
+                             class="img-fluid rounded shadow-sm img-height-small">
+                    </div>
+                    <div class="col-lg-8">
+                        <h2 class="mb-4"><i class="fas fa-info-circle"></i> Our Story</h2>
+                        <p>Okhandayo PTY LTD was established in 2013 as a 100% black-owned company with a vision to create more jobs for unemployed South Africans, uplift the standard of life through social intervention, and develop communities to be more self-reliant.</p>
+                        <p>Our founder took the opportunity offered by South Africa's democracy to become a job creator rather than a job seeker. We aim to participate in the mainstream of socio-economic development by addressing social challenges and creating job opportunities for youth, unemployed men, and women.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5"><i class="fas fa-handshake"></i> Our Core Values</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-ethics"></i> Integrity</h3>
+                        <p class="card-text">We always do what we say, maintaining the highest ethical standards in all our operations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-users"></i> Community Conscious</h3>
+                        <p class="card-text">We are committed to reaching all communities, respecting and embracing their diversity.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-tachometer-alt"></i> Quality</h3>
+                        <p class="card-text">We strive for absolute quality in all our services, ensuring the best outcomes for our clients and communities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5"><i class="fas fa-bullseye"></i> Our Mission and Vision</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-bullhorn"></i> Our Mission</h3>
+                        <p class="card-text">To provide quality services to our clients, create sustainable jobs for the unemployed and disadvantaged communities, and participate in addressing the government's vision of infrastructure development.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-eye"></i> Our Vision</h3>
+                        <p class="card-text">To become a highly recognized company that provides quality work in both social and construction fields for our clients and the communities we work with.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Join Us in Building a Better Future</h2>
+        <p class="lead mb-4">Together, we can create sustainable change and empower communities across South Africa.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Get in Touch</a>
+    </div>
+</section>
+{% endblock %}

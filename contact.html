@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Okhandayo PTY LTD{% endblock %}
+<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+{% block content %}
+<section class="hero-section bg-light">
+    <div class="container py-5">
+        <h1 class="display-4 fw-bold mb-3">Contact Us</h1>
+        <p class="lead">Get in touch with Okhandayo PTY LTD for your construction and community development needs.</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 mb-4">
+                <h2 class="mb-4">Send Us a Message</h2>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group row mb-3">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control input-wide" id="from_name" name="from_name" placeholder="Your Name" required>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <div class="col-sm-12">
+                                <input type="email" class="form-control input-wide" id="user_email" name="user_email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control input-wide" id="user_subject" name="user_subject" placeholder="Subject" required>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <div class="col-sm-12">
+                                <textarea class="form-control input-wide" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12 text-center">
+                                <button type="submit" class="btn btn-primary center-button" style="background-color: rgb(192, 189, 144);">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <h2 class="mb-4">Contact Information</h2>
+                <div class="contact-info-card card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Okhandayo PTY LTD</h3>
+                        <p class="card-text"><strong>Address:</strong> 2629 Bauhinia Avenue, Margate, 4275</p>
+                        <p class="card-text"><strong>Phone:</strong> 072 657 8259</p>
+                        <p class="card-text"><strong>Email:</strong> stevenkonyeni@okhandayo.co.za</p>
+                        <p class="card-text"><strong>Business Hours:</strong><br>
+                        Monday - Friday: 8:00 AM - 5:00 PM<br>
+                        Saturday: 9:00 AM - 1:00 PM<br>
+                        Sunday: Closed</p>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe
+                        width="100%"
+                        height="300"
+                        frameborder="0"
+                        scrolling="no"
+                        marginheight="0"
+                        marginwidth="0"
+                        src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=2629%20Bauhinia%20Avenue,%20Margate,%204275+(Okhandayo%20PTY%20LTD)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% block scripts %}
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        emailjs.init("JPM-lMwN8mQcArfLj"); // Initialize EmailJS with your public key
+    })();
+</script>
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Send the form data using EmailJS
+        emailjs.sendForm('service_kx14obi', 'template_75obh8l', this)
+            .then(function() {
+                alert('Thank you for your message. We will get back to you soon!');
+                document.getElementById('contact-form').reset(); // Reset the form after successful submission
+            }, function(error) {
+                console.error('Failed to send message...', error);
+                alert('Oops! Something went wrong. Please try again later.');
+            });
+    });
+</script>
+{% endblock %}
+{% endblock %}

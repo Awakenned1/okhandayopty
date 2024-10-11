@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block title %}Our Services - Okhandayo PTY LTD{% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+{% block content %}
+<section class="hero-section bg-light">
+    <div class="container py-5">
+        <h1 class="display-4 fw-bold mb-3">Our Services</h1>
+        <p class="lead">Comprehensive solutions for construction, social facilitation, and supply chain management.</p>
+    </div>
+</section>
+
+<section id="construction" class="py-5">
+    <div class="container">
+        <h2 class="section-title mb-4">Construction Services</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+               <div class="image-container">
+    <img src="{{ url_for('static', filename='images/building.jpg') }}"
+         alt="Construction Services"
+         class="img-fluid rounded shadow-lg service-image"
+         style="width: 400px; height: 400px;">
+</div>
+
+            </div>
+            <div class="col-md-6">
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-check text-primary mr-2"></i> Road Work - Civil Construction</li>
+                    <li><i class="fas fa-check text-primary mr-2"></i> Building Construction</li>
+                    <li><i class="fas fa-check text-primary mr-2"></i> Maintenance</li>
+                    <li><i class="fas fa-check text-primary mr-2"></i> Access Roads</li>
+                    <li><i class="fas fa-check text-primary mr-2"></i> Project Management</li>
+                    <li><i class="fas fa-check text-primary mr-2"></i> Local Contractors Mentorship</li>
+                </ul>
+                <p>Our construction services are designed to meet the highest standards of quality and efficiency. We specialize in various aspects of construction, from road work to building projects, ensuring sustainable development in the communities we serve.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="social-facilitation" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title mb-4">Social Facilitation and Consultation</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+                <div class="image-container" style="text-align: right;">
+                    <img src="{{ url_for('static', filename='images/pipline.jpg') }}"
+                         alt="Social Facilitation"
+                         class="img-fluid rounded shadow-lg service-image"
+                         style="width: 400px; height: auto; float: right; margin-right: 0;">
+                </div>
+            </div>
+
+            <div class="col-md-6 order-md-1">
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-check text-primary mr-2"></i> Needs Analysis</li>
+                    <li><i class="fas fa-check text-primary mr-2"></i> Community Mobilizing</li>
+                    <li><i class="fas fa-check text-primary mr-2"></i> Project Planning</li>
+                    <li><i class="fas fa-check text-primary mr-2"></i> Capacity Building Training</li>
+                    <li><i class="fas fa-check text-primary mr-2"></i> Awareness Programmes</li>
+                    <li><i class="fas fa-check text-primary mr-2"></i> Life Skills Training</li>
+                </ul>
+                <p>Our social facilitation services are aimed at empowering communities and fostering sustainable development. We work closely with local stakeholders to ensure that our projects have a lasting positive impact on the people we serve.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="supply-distribution" class="py-5">
+    <div class="container">
+        <h2 class="section-title mb-4">Supply and Distribution</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='images/trucker.jpg') }}" alt="Supply and Distribution" class="img-fluid rounded shadow-lg service-image">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-check text-primary mr-2"></i> Supply Chain Management</li>
+                    <li><i class="fas fa-check text-primary mr-2"></i> Distribution Services</li>
+                    <li><i class="fas fa-check text-primary mr-2"></i> Inventory Management</li>
+                    <li><i class="fas fa-check text-primary mr-2"></i> Logistics Coordination</li>
+                    <li><i class="fas fa-check text-primary mr-2"></i> Quality Control</li>
+                </ul>
+                <p>Our supply and distribution services ensure that materials and resources are efficiently managed and delivered. We leverage our expertise to optimize supply chains and support the success of our construction and community development projects.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Start Your Project?</h2>
+        <p class="lead mb-4">Let's discuss how Okhandayo PTY LTD can help bring your vision to life.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Contact Us Today</a>
+    </div>
+</section>
+{% endblock %}

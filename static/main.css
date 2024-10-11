@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #121313;
+    --secondary-color: #6c757d;
+    --accent-color: #e1b839;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+    --highlight-color: #d4edda;
+    --highlight-text-color: #155724;
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary-color) !important;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--light-color);
+    padding: 100px 0;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--dark-color);
+    transition: all 0.3s ease;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-team {
+    background-color: #4da6ff;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--accent-color), 10%);
+    border-color: darken(var(--accent-color), 10%);
+    color: var(--dark-color);
+    transform: translateY(-2px);
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+/* Services styles */
+.service-card {
+    height: 100%;
+}
+
+.service-card .card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.service-card .card-title {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.service-card .card-text {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.service-card .btn {
+    align-self: center;
+}
+
+/* Specific styling for the construction image */
+#construction .image-container {
+    width: 400px; /* Fixed width */
+    height: 225px; /* Fixed height */
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#construction .service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+/* Team styles */
+.team-member-card {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 133.33%; /* 3:4 aspect ratio */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team-member-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.team-member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.team-member-info h5 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    color: var(--accent-color);
+}
+
+.team-member-info p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+/* Contact Form */
+.contact-form {
+    background-color: var(--light-color);
+    padding: 4rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure it takes up the full available width */
+    margin-right: 1.5rem; /* Add some space between the form and the contact info card */
+}
+
+.input-wide {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--secondary-color);
+}
+
+.input-wide:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 2rem;
+        margin-right: 0; /* Remove the margin on smaller screens */
+    }
+
+    .contact-info-card {
+        margin-top: 2rem;
+    }
+}
+
+.contact-info-card {
+    background-color: var(--highlight-color);
+    color: var(--highlight-text-color);
+    border: 1px solid var(--highlight-text-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+
+.contact-info-card .card-title {
+    color: var(--highlight-text-color);
+    font-weight: 700;
+}
+
+.contact-info-card .card-text {
+    color: var(--highlight-text-color);
+    margin-bottom: 1rem;
+}
+
+/* About page styles */
+.img-height-small {
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+/* Mission and Vision cards */
+.mission-vision-card {
+    height: 100%;
+}
+
+.mission-vision-card .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.mission-vision-card .card-title {
+    margin-bottom: 1rem;
+}
+
+.mission-vision-card .card-text {
+    flex-grow: 1;
+}
+
+/* Additional styling */
+.bg-light {
+    background-color: #f0f4f8 !important;
+}
+
+.py-5 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+}
+
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+}
+
+/* Button styles */
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Responsive adjustments (disabled responsiveness) */
+@media (max-width: 991px) {
+    .image-container {
+        width: 400px; /* Fixed width */
+        height: 225px; /* Fixed height */
+    }
+    .service-image {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.btn-custom {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--dark-color);
+    transition: all 0.3s ease;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-custom:hover {
+    background-color: darken(var(--accent-color), 10%);
+    border-color: darken(var(--accent-color), 10%);
+    color: var(--dark-color);
+    transform: translateY(-2px);
+}
+/* Project Page Styles */
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-description {
+    padding: 1rem;
+}
+
+.project-description h5 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.project-description p {
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+/* Call to Action Section */
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.text-white {
+    color: var(--light-color) !important;
+}
+
+.py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+.btn-light {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-light:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .project-image {
+        height: 150px;
+    }
+}

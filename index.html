@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block title %}Okhandayo PTY LTD - Building a Better Future{% endblock %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+{% block content %}
+<!-- Hero Section -->
+<section id="hero" class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-3">Building a <span class="text-primary">Better Future</span></h1>
+                <p class="lead mb-4">Okhandayo PTY LTD is committed to creating sustainable jobs and developing communities through construction and social facilitation.</p>
+                <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">Get in Touch</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-image-container">
+                    <img src="{{ url_for('static', filename='images/roadwork.jpg') }}" alt="Okhandayo Project" class="img-fluid hero-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Company Intro Section -->
+<section id="intro" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-title">Welcome to Okhandayo PTY LTD</h2>
+                <p class="lead">We are a 100% black-owned company established in 2013, dedicated to uplifting communities and creating sustainable employment opportunities.</p>
+                <a href="{{ url_for('about') }}" class="btn btn-primary mt-3">Learn More About Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview Section -->
+<section id="services-overview" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Our Services</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 service-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Construction</h3>
+                        <p class="card-text">We specialize in road work, building construction, maintenance, and access roads.</p>
+                        <a href="{{ url_for('services') }}#construction" class="btn btn-sm btn-outline-primary mt-auto">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 service-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Social Facilitation</h3>
+                        <p class="card-text">Our team excels in community mobilization, project planning, and capacity building training.</p>
+                        <a href="{{ url_for('services') }}#social-facilitation" class="btn btn-sm btn-outline-primary mt-auto">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 service-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Supply & Distribution</h3>
+                        <p class="card-text">We offer comprehensive supply chain management and distribution services.</p>
+                        <a href="{{ url_for('services') }}#supply-distribution" class="btn btn-sm btn-outline-primary mt-auto">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Highlight Section -->
+<section id="team-highlight" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Meet Our Leadership</h2>
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="team-member-card">
+                    <div class="team-member-image">
+                        <img src="{{ url_for('static', filename='images/steve.jpg') }}" alt="Steve Nkonyeni">
+                    </div>
+                    <div class="team-member-info">
+                        <h5>Steve Nkonyeni</h5>
+                        <p>Managing Director</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="team-member-card">
+                    <div class="team-member-image">
+                        <img src="{{ url_for('static', filename='images/nzwaki.jpg') }}" alt="Nzwaki Nkonyeni">
+                    </div>
+                    <div class="team-member-info">
+                        <h5>Nzwaki Nkonyeni</h5>
+                        <p>Finance Manager</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="team-member-card">
+                    <div class="team-member-image">
+                        <img src="{{ url_for('static', filename='images/nokwanda.jpg') }}" alt="Nokwanda Nxumalo">
+                    </div>
+                    <div class="team-member-info">
+                        <h5>Nokwanda Nxumalo</h5>
+                        <p>Human Resource Manager</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="team-member-card">
+                    <div class="team-member-image">
+                        <img src="{{ url_for('static', filename='images/nkosi.JPG') }}" alt="Nkosinam Dlungwana">
+                    </div>
+                    <div class="team-member-info">
+                        <h5>Nkosinam Dlungwana</h5>
+                        <p>Software Engineer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section id="cta" class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-3">Ready to Work with Us?</h2>
+        <p class="lead mb-4">Let's discuss how Okhandayo PTY LTD can help with your next project.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Contact Us Today</a>
+    </div>
+</section>
+
+{% endblock %}
